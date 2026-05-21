@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const footerLinks = [
   { href: "#about", label: "About" },
   { href: "#menu", label: "Menu" },
@@ -7,36 +9,54 @@ const footerLinks = [
   { href: "#contact", label: "Contact" },
 ];
 
+const socials = [
+  {
+    label: "Instagram",
+    handle: "@mamasdonutbites",
+    href: "https://instagram.com/mamasdonutbites",
+  },
+  {
+    label: "Facebook",
+    handle: "Mama's Donut Bites",
+    href: "https://www.facebook.com/pages/Mamas-Donut-Bites/219968224715863",
+  },
+  {
+    label: "Twitter",
+    handle: "@MamasDonutBites",
+    href: "https://twitter.com/MamasDonutBites",
+  },
+  {
+    label: "Yelp",
+    handle: "Leave a Review",
+    href: "http://www.yelp.com/biz/mamas-donut-bites-arlington",
+  },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <footer className="bg-chocolate text-powder">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mb-10">
-          {/* Brand */}
-          <div className="sm:col-span-2 md:col-span-1">
-            <a href="#" className="flex items-center gap-2.5 mb-3 group w-fit">
-              <span className="text-3xl group-hover:rotate-12 transition-transform duration-200">
-                🍩
-              </span>
-              <div className="font-heading text-xl font-bold text-powder leading-tight">
-                Mama&apos;s Donut Bites
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+          {/* Brand + logo */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <a href="#" className="inline-block mb-4 group">
+              <div className="bg-white rounded-2xl p-2 inline-block group-hover:scale-105 transition-transform duration-200">
+                <Image
+                  src="/logo.jpg"
+                  alt="Mama's Donut Bites"
+                  width={90}
+                  height={90}
+                  className="object-contain"
+                />
               </div>
             </a>
-            <p className="text-tan text-sm leading-relaxed mb-5">
+            <p className="text-tan text-sm leading-relaxed">
               Fresh, hot, made-to-order mini donuts serving the DMV.
               <br />
               Arlington · Washington DC · Northern Virginia.
             </p>
-            <a
-              href="https://instagram.com/mamasdonutbites"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-raspberry/20 hover:bg-raspberry/40 text-powder px-4 py-2 rounded-full text-sm font-semibold transition-colors"
-            >
-              📷 @mamasdonutbites
-            </a>
           </div>
 
           {/* Quick links */}
@@ -78,14 +98,40 @@ export default function Footer() {
                 <span>(703) 608-7056</span>
               </a>
               <a
-                href="https://instagram.com/mamasdonutbites"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#contact"
                 className="flex items-center gap-2 text-tan hover:text-golden transition-colors"
               >
-                <span>📷</span>
-                <span>@mamasdonutbites</span>
+                <span>🎉</span>
+                <span>Book Catering</span>
               </a>
+            </div>
+          </div>
+
+          {/* Social links */}
+          <div>
+            <div className="font-heading text-lg font-bold text-powder mb-4">
+              Follow Us
+            </div>
+            <div className="space-y-3">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 group"
+                >
+                  <span className="w-8 h-8 rounded-full bg-chocolate-light/60 flex items-center justify-center text-xs font-bold text-tan group-hover:bg-golden/20 group-hover:text-golden transition-all shrink-0">
+                    {s.label.slice(0, 2).toUpperCase()}
+                  </span>
+                  <div>
+                    <div className="text-sm font-semibold text-powder/90 group-hover:text-golden transition-colors leading-tight">
+                      {s.label}
+                    </div>
+                    <div className="text-xs text-tan/70">{s.handle}</div>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>

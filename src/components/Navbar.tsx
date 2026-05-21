@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -27,15 +28,20 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5 group">
-          <span className="text-3xl group-hover:rotate-12 transition-transform duration-200">
-            🍩
-          </span>
-          <div className="leading-tight">
+        <a href="#" className="flex items-center gap-2 group">
+          <Image
+            src="/logo.jpg"
+            alt="Mama's Donut Bites"
+            width={52}
+            height={52}
+            className="object-contain rounded-lg group-hover:scale-105 transition-transform duration-200"
+            priority
+          />
+          <div className="leading-tight hidden sm:block">
             <div className="font-heading text-lg font-bold text-chocolate">
               Mama&apos;s Donut Bites
             </div>
-            <div className="text-xs text-donut hidden sm:block font-medium">
+            <div className="text-xs text-donut font-medium">
               Fresh Hot Mini Donuts
             </div>
           </div>

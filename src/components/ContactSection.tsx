@@ -180,22 +180,56 @@ export default function ContactSection() {
               </div>
             </a>
 
-            <a
-              href="https://instagram.com/mamasdonutbites"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-start gap-4 bg-powder rounded-2xl p-5 shadow-sm border border-tan/30 hover:shadow-md hover:border-raspberry/30 transition-all group"
-            >
-              <div className="text-3xl">📷</div>
-              <div>
-                <div className="text-xs font-semibold text-chocolate-light mb-0.5 uppercase tracking-wide">
+            <div className="grid grid-cols-2 gap-3">
+              <a
+                href="https://instagram.com/mamasdonutbites"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1.5 bg-powder rounded-xl p-4 shadow-sm border border-tan/30 hover:shadow-md hover:border-raspberry/30 transition-all group text-center"
+              >
+                <div className="text-2xl">📷</div>
+                <div className="text-xs font-bold text-chocolate group-hover:text-raspberry transition-colors">
                   Instagram
                 </div>
-                <div className="font-semibold text-chocolate group-hover:text-raspberry transition-colors">
-                  @mamasdonutbites
+                <div className="text-xs text-chocolate-light">@mamasdonutbites</div>
+              </a>
+              <a
+                href="https://www.facebook.com/pages/Mamas-Donut-Bites/219968224715863"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1.5 bg-powder rounded-xl p-4 shadow-sm border border-tan/30 hover:shadow-md hover:border-raspberry/30 transition-all group text-center"
+              >
+                <div className="text-2xl">👍</div>
+                <div className="text-xs font-bold text-chocolate group-hover:text-raspberry transition-colors">
+                  Facebook
                 </div>
-              </div>
-            </a>
+                <div className="text-xs text-chocolate-light">Like our page</div>
+              </a>
+              <a
+                href="https://twitter.com/MamasDonutBites"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1.5 bg-powder rounded-xl p-4 shadow-sm border border-tan/30 hover:shadow-md hover:border-raspberry/30 transition-all group text-center"
+              >
+                <div className="text-2xl">🐦</div>
+                <div className="text-xs font-bold text-chocolate group-hover:text-raspberry transition-colors">
+                  Twitter
+                </div>
+                <div className="text-xs text-chocolate-light">@MamasDonutBites</div>
+              </a>
+              <a
+                href="http://www.yelp.com/biz/mamas-donut-bites-arlington"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-1.5 bg-powder rounded-xl p-4 shadow-sm border border-tan/30 hover:shadow-md hover:border-raspberry/30 transition-all group text-center"
+              >
+                <div className="text-2xl">⭐</div>
+                <div className="text-xs font-bold text-chocolate group-hover:text-raspberry transition-colors">
+                  Yelp
+                </div>
+                <div className="text-xs text-chocolate-light">Leave a review</div>
+              </a>
+            </div>
 
             <div className="bg-golden/15 border border-golden/30 rounded-2xl p-5">
               <div className="font-heading text-lg font-bold text-chocolate mb-1">

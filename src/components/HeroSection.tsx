@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-cream via-cream to-tan/40 pt-16">
@@ -61,23 +63,24 @@ export default function HeroSection() {
 
         {/* Hero visual */}
         <div className="flex justify-center">
-          <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
-            <div className="w-full h-full rounded-full bg-gradient-to-br from-golden via-donut to-chocolate shadow-2xl flex items-center justify-center">
-              <div className="text-center text-powder">
-                <div className="text-7xl md:text-8xl mb-3">🍩</div>
-                <div className="font-heading text-xl md:text-2xl font-bold">
-                  Mini Donut Bites
-                </div>
-                <div className="text-powder/70 text-sm mt-1">Fresh &amp; Hot</div>
-              </div>
+          <div className="relative">
+            <div className="bg-white rounded-3xl shadow-2xl ring-4 ring-golden/20 p-4">
+              <Image
+                src="/logo.jpg"
+                alt="Mama's Donut Bites"
+                width={340}
+                height={340}
+                className="object-contain"
+                priority
+              />
             </div>
             <div
-              className="absolute -top-3 -right-3 w-16 h-16 bg-raspberry rounded-full shadow-lg flex items-center justify-center text-3xl animate-float"
+              className="absolute -top-4 -right-4 w-16 h-16 bg-raspberry rounded-full shadow-lg flex items-center justify-center text-3xl animate-float"
             >
               🍩
             </div>
             <div
-              className="absolute -bottom-3 -left-3 w-14 h-14 bg-cream rounded-full shadow-md flex items-center justify-center text-2xl animate-float"
+              className="absolute -bottom-4 -left-4 w-14 h-14 bg-cream rounded-full shadow-md flex items-center justify-center text-2xl animate-float"
               style={{ animationDelay: "1.2s" }}
             >
               ✨
