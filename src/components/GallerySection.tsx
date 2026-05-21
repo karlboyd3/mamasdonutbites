@@ -26,9 +26,9 @@ const photos = [
     emoji: "😊",
   },
   {
-    src: null,
-    alt: "Mama's Donut Bites at a farmers market",
-    label: "Farmers market",
+    src: "/truck-outdoor.png",
+    alt: "Mama's Donut Bites truck at an outdoor event",
+    label: "Outdoor event",
     emoji: "🌱",
   },
   {
