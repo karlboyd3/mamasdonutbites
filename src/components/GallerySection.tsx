@@ -1,39 +1,41 @@
+import Image from "next/image";
+
 const photos = [
   {
-    emoji: "🍩",
+    src: "/donut-classic.png",
+    alt: "Fresh mini donut bites",
     label: "Fresh donut bites",
-    gradient: "from-golden to-donut",
-    span: "",
+    emoji: "🍩",
   },
   {
-    emoji: "🔥",
+    src: "/donut-making.png",
+    alt: "Mini donuts being made fresh on the fryer",
     label: "Donuts being made",
-    gradient: "from-donut to-chocolate-light",
-    span: "",
+    emoji: "🔥",
   },
   {
+    src: "/truck.png",
+    alt: "Mama's Donut Bites food truck",
+    label: "The truck",
     emoji: "🚚",
-    label: "Food truck setup",
-    gradient: "from-tan to-golden/60",
-    span: "sm:col-span-2 lg:col-span-1",
   },
   {
-    emoji: "🎉",
-    label: "Catering event",
-    gradient: "from-raspberry/40 to-raspberry-light/20",
-    span: "",
-  },
-  {
-    emoji: "🌱",
-    label: "Farmers market",
-    gradient: "from-golden-light/60 to-tan",
-    span: "",
-  },
-  {
-    emoji: "😊",
+    src: "/donut-customer.png",
+    alt: "Happy customer enjoying mini donut bites",
     label: "Happy customers",
-    gradient: "from-cream-dark to-tan/50",
-    span: "",
+    emoji: "😊",
+  },
+  {
+    src: null,
+    alt: "Mama's Donut Bites at a farmers market",
+    label: "Farmers market",
+    emoji: "🌱",
+  },
+  {
+    src: "/donut-chocolate.png",
+    alt: "Chocolate drizzle mini donut bites",
+    label: "Chocolate drizzle bites",
+    emoji: "🍫",
   },
 ];
 
@@ -57,16 +59,24 @@ export default function GallerySection() {
           {photos.map((photo) => (
             <div
               key={photo.label}
-              className={`${photo.span} aspect-square bg-gradient-to-br ${photo.gradient} rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-all group cursor-pointer flex items-center justify-center`}
+              className="aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-all group relative bg-cream-dark"
             >
-              <div className="text-center">
-                <div className="text-5xl mb-2 group-hover:scale-110 transition-transform">
-                  {photo.emoji}
+              {photo.src ? (
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
+              ) : (
+                <div className="w-full h-full flex flex-col items-center justify-center gap-2 text-chocolate/30">
+                  <span className="text-5xl opacity-40">{photo.emoji}</span>
+                  <span className="text-xs font-medium tracking-wide uppercase">
+                    {photo.label}
+                  </span>
                 </div>
-                <div className="text-chocolate/50 text-xs font-medium group-hover:text-chocolate/70 transition-colors">
-                  {photo.label}
-                </div>
-              </div>
+              )}
             </div>
           ))}
         </div>

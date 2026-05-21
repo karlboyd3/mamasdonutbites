@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const features = [
   {
     icon: "🍩",
@@ -52,17 +54,14 @@ export default function AboutSection() {
             </div>
           </div>
 
-          {/* Image placeholder */}
-          <div className="rounded-2xl overflow-hidden shadow-xl aspect-square bg-gradient-to-br from-golden/30 via-tan to-donut/20 flex items-center justify-center">
-            <div className="text-center p-8">
-              <div className="text-8xl mb-4">🚚</div>
-              <div className="font-heading text-2xl font-bold text-chocolate mb-2">
-                Mama&apos;s Donut Bites
-              </div>
-              <div className="text-chocolate-light text-sm">
-                [ Add food truck photo here ]
-              </div>
-            </div>
+          {/* Truck photo */}
+          <div className="rounded-2xl overflow-hidden shadow-xl aspect-video relative">
+            <Image
+              src="/truck.png"
+              alt="Mama's Donut Bites food truck"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
 
