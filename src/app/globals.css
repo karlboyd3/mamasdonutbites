@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-cream: #FFF5E6;
+  --color-cream-dark: #F5E6D0;
+  --color-powder: #FFFBF5;
+  --color-tan: #E8C98A;
+  --color-donut: #A0522D;
+  --color-donut-light: #C47947;
+  --color-golden: #D4940A;
+  --color-golden-light: #F0B429;
+  --color-raspberry: #C2185B;
+  --color-raspberry-light: #E91E8C;
+  --color-chocolate: #3E1F00;
+  --color-chocolate-light: #6B3A1F;
+
+  /* Font Families */
+  --font-heading: var(--font-fredoka), "Fredoka", sans-serif;
+  --font-body: var(--font-nunito), "Nunito", sans-serif;
+
+  /* Animations */
+  --animate-float: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFF5E6;
+  color: #3E1F00;
+  font-family: var(--font-body), "Nunito", sans-serif;
+}
