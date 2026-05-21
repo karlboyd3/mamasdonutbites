@@ -4,7 +4,6 @@ import CateringSection from "@/components/CateringSection";
 import TrackSection from "@/components/TrackSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import GallerySection from "@/components/GallerySection";
-import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
       <TrackSection />
       <ReviewsSection />
       <GallerySection />
-      <ContactSection />
       <Footer />
     </main>
   );

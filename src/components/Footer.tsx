@@ -5,7 +5,6 @@ const footerLinks = [
   { href: "#catering", label: "Catering" },
   { href: "#find-us", label: "Find Us" },
   { href: "#gallery", label: "Gallery" },
-  { href: "#contact", label: "Contact" },
 ];
 
 const socials = [

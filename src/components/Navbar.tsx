@@ -7,6 +7,7 @@ const navLinks = [
   { href: "#catering", label: "Catering" },
   { href: "#find-us", label: "Find Us" },
   { href: "#gallery", label: "Gallery" },
+  { href: "mailto:mamasdonutbites@gmail.com", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -59,7 +60,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="mailto:mamasdonutbites@gmail.com"
             className="ml-2 bg-raspberry text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-raspberry-light hover:shadow-md transition-all"
           >
             Book Now
@@ -110,7 +111,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="mailto:mamasdonutbites@gmail.com"
             onClick={() => setMenuOpen(false)}
             className="mt-1 px-4 py-3 rounded-xl font-bold bg-raspberry text-white text-center hover:bg-raspberry-light transition-colors"
           >

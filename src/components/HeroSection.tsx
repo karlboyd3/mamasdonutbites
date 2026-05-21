@@ -39,7 +39,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
             <a
-              href="#contact"
+              href="mailto:mamasdonutbites@gmail.com"
               className="bg-raspberry text-white px-6 py-3.5 rounded-full font-bold text-sm tracking-wide hover:bg-raspberry-light hover:shadow-lg hover:-translate-y-0.5 transition-all inline-flex items-center justify-center gap-2"
             >
               🎉 Book Catering

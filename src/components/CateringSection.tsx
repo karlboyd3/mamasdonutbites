@@ -59,7 +59,7 @@ export default function CateringSection() {
             large corporate celebrations. Let&apos;s make your event sweet.
           </p>
           <a
-            href="#contact"
+            href="mailto:mamasdonutbites@gmail.com"
             className="inline-flex items-center gap-2 bg-raspberry text-white px-8 py-4 rounded-full font-bold text-base hover:bg-raspberry-light hover:shadow-lg hover:-translate-y-0.5 transition-all"
           >
             🎉 Request a Catering Quote
