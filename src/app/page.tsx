@@ -1,6 +1,5 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import MenuSection from "@/components/MenuSection";
 import CateringSection from "@/components/CateringSection";
 import TrackSection from "@/components/TrackSection";
 import ReviewsSection from "@/components/ReviewsSection";
@@ -13,7 +12,6 @@ export default function Home() {
     <main>
       <HeroSection />
       <AboutSection />
-      <MenuSection />
       <CateringSection />
       <TrackSection />
       <ReviewsSection />
